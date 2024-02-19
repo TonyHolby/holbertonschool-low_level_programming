@@ -9,10 +9,10 @@
  */
 int main(void)
 {
-	printf("int=%lu bytes\n", sizeof(char));
+	printf("char=%lu bytes\n", sizeof(char));
 	printf("int=%lu bytes\n", sizeof(int));
-	printf("int=%lu bytes\n", sizeof(long));
-	printf("int=%lu bytes\n", sizeof(long long int));
-	printf("int=%lu bytes\n", sizeof(float));
+	printf("long=%lu bytes\n", sizeof(long));
+	printf("long long int=%lu bytes\n", sizeof(long long int));
+	printf("float=%lu bytes\n", sizeof(float));
 	return (0);
 }
