@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
- the function puts - This is a description
+ * the function puts - This is a description
  */
 int main(void)
 {
