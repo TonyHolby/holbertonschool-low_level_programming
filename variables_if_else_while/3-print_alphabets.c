@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * Description: prints the alphabet in lowercase and then in 
+ * Description: prints the alphabet in lowercase and then in
  * uppercase, followed by a newline
  *
  * Return: 0
