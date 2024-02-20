@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -13,9 +14,9 @@ int main(void)
 {
 	int n;
 
-	for (n = 48 ; n < 16 ; n++)
+	for (n = '0' ; n < "10" ; n++)
 	{
-		if (n != 57)
+		if (n != '9')
 		{
 			putchar(n);
 			putchar(',');
