@@ -16,14 +16,14 @@ int main(void)
 
 	for (n = '0' ; n <= '9' ; n++)
 	{
-		if (n != '9')
+		putchar(n);
+		if (n < '9')
 		{
-			putchar(n);
 			putchar(',');
 			putchar(' ');
 		}
 		else
-			putchar(n);
+			putchar('\n');
 	}
 
 	return (0);
