@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: prints all possible combinations of single-digit numbers,
- * separeted by and followed by a space
+ * separeted by , and followed by a space
  *
  * Return: 0
  */
@@ -13,9 +13,9 @@ int main(void)
 {
 	int n;
 
-	for (n = '0' ; n < '10' ; n++)
+	for (n = 0 ; n < 10 ; n++)
 	{
-		if (n !=  '9')
+		if (n !=  9)
 		{
 			putchar(n);
 			putchar(',');
