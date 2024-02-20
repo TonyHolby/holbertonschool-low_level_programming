@@ -23,19 +23,19 @@ int main(void)
 	if (last_digit > 5)
 	{
 		printf("%d Last digit of", n);
-		printf("is", last_digit);
+		printf("%d is", last_digit);
 		printf ("and is greater than 5\n");
 	}
 	else if (last_digit == 0)
 	{
 		printf("%d Last digit of", n);
-		printf("is", last_digit);
+		printf("%d is", last_digit);
 		printf("and is 0\n");
 	}
 	else
 	{
 		printf("%d Last digit of", n);
-		printf("is", last_digit);
+		printf("%d is", last_digit);
 		printf("and is less than 6 and not 0\n");
 	}
 
