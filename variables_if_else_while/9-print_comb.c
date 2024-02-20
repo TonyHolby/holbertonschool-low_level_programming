@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Entry point
  *
- * Description: prints all possible combinations of single-digit numbers
+ * Description: prints all possible combinations of single-digit numbers,
+ * separeted by and followed by a space
  *
  * Return: 0
  */
@@ -18,13 +18,11 @@ int main(void)
 		if (n !=  9)
 		{
 			putchar(n);
-			putchar(', ');
+			putchar(',');
+			putchar(' ');
 		}
 		else
-		{
 			putchar(n);
-			putchar('\n');
-		}
 	}
 
 	return (0);
