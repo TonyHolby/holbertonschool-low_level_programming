@@ -9,33 +9,27 @@
  * Return: 0
  */
 
-int main(void)
+int main()
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int main()
+	int n;
+	if (n < 0)
 	{
-		int n;
-
-		if (n < 0)
-		{
-			printf("%d", n);
-			printf("is negative\n");
-		}
-		else if (n == 0)
-		{
-			printf("%d", n);
-			printf("is zero\n");
-		}
-		else if (n > 0)
-		{
-			printf("%d", n);
-			printf("is positive\n");
-		}
+		printf("%d", n, "is negative\n");
 	}
+	else if (n == 0)
+	{
+		printf("%d", n, "is zero\n");
+	}
+	else
+	{
+		printf("%d", n, "is positive\n");
+	}
+}
 
 	return (0);
 }
