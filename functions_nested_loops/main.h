@@ -1,6 +1,6 @@
-#ifndef string_putchar
-#define string_putchar
+#ifndef string_PUTCHAR_H
+#define string_PUTCHAR_H
 
-printf("_putchar\n");
+int string_putchar(void);
 
 #endif
