@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <string.h>
 #include "main.h"
 
 /**
@@ -10,13 +8,16 @@
  * Return: 0
  */
 
-int main(void)
+int _putchar(char c)
 {
-	char string_PUTCHAR_H;
-
-	putchar(string_PUTCHAR_H);
-
-	putchar('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
 	return (0);
 }
