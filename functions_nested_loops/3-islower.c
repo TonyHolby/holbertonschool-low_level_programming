@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * _islower - Entry point
  *
  * Description: a function that checks for lowercase character
- * with c in parameter
+ * 'c' is an unsigned char
  *
  * Return: 0
  */
