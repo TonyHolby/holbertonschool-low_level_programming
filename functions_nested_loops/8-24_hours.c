@@ -15,26 +15,25 @@ void jack_bauer(void)
 	int d_min;
 	int u_min;
 
-	for (d_hour = 0 ; d_hour <= 2 ; d_hour++)
+	while (d_hour <= 2 && u_min <= 3)
 	{
-		for (u_hour = 0 ; u_hour <= 3 ; u_hour++)
+		for (d_hour = 0 ; d_hour <= 2 ; d_hour++)
 		{
-			for (d_min = 0 ; d_min <= 5 ; d_min++)
+			for (u_hour = 0 ; u_hour <= 9 ; u_hour++)
 			{
-				for (u_min = 0 ; u_min <= 9 ; u_min++)
+				for (d_min = 0 ; d_min <= 5 ; d_min++)
 				{
-					_putchar('0' + d_hour);
-					_putchar('0' + u_hour);
-					_putchar(':');
-					_putchar('0' + d_min);
-					_putchar('0' + u_min);
-					_putchar('\n');
+					for (u_min = 0 ; u_min <= 9 ; u_min++)
+					{
+						_putchar('0' + d_hour);
+						_putchar('0' + u_hour);
+						_putchar(':');
+						_putchar('0' + d_min);
+						_putchar('0' + u_min);
+						_putchar('\n');
+					}
 				}
 			}
 		}
 	}
 }
-
-
-
-
