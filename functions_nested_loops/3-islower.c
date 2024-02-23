@@ -5,10 +5,10 @@
 /**
  * _islower - Entry point
  *
- * Description: a function that checks for lowercase character
- * 'c' is an unsigned char
+ * Description: a function that checks for c is a lowercase character
+ * @c: variable
  *
- * Return: 0
+ * Return: 1 if true and 0 if false
  */
 
 int _islower(int c)
