@@ -14,7 +14,20 @@
 
 int print_last_digit(int last_digit)
 {
-	_putchar('0' + last_digit);
+	last_digit = last_digit % 10;
 
-	return (last_digit);
+	if (last_digit < 0)
+	{
+		_abs(last_digit)
+		last_digit = _abs(last_digit) % 10;
+		_putchar('0' + last_digit);
+		return (last_digit);
+	}
+
+	else
+	{
+		last_digit = last_digit % 10;
+		_putchar('0' + last_digit);
+		return (last_digit);
+	}
 }
