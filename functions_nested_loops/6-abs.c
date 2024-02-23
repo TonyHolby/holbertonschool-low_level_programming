@@ -7,10 +7,10 @@
  * Description: a function that computes the absolute value of an integer
  * @int: variable
  *
- * Return: abs(int)
+ * Return: abs(AN_INTEGER)
  */
 
-int _abs(int my_integer)
+int _abs(int AN_INTEGER)
 {
-	return (my_integer);
+	return (abs(AN_INTEGER));
 }
