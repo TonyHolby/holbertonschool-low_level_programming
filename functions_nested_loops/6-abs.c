@@ -5,7 +5,7 @@
  * _abs - Entry point
  *
  * Description: a function that computes the absolute value of an integer
- * @int: variable
+ * @AN_INTEGER: variable
  *
  * Return: abs(AN_INTEGER)
  */
