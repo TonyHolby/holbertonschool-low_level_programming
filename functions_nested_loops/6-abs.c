@@ -10,7 +10,7 @@
  * Return: abs(int)
  */
 
-int _abs(int)
+int _abs(int my_integer)
 {
-	return (int);
+	return (my_integer);
 }
