@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
 
 /**
  * print_last_digit - Entry point
@@ -18,8 +16,8 @@ int print_last_digit(int last_digit)
 
 	if (last_digit < 0)
 	{
-		_abs(last_digit);
-		last_digit = _abs(last_digit) % 10;
+		last_digit = last_digit * (-1);
+		last_digit = last_digit % 10;
 		_putchar('0' + last_digit);
 		return (last_digit);
 	}
