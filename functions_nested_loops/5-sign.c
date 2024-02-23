@@ -6,7 +6,7 @@
  * print_sign - Entry point
  *
  * Description: a function that prints the sign of a number
- * @c: variable
+ * @n: variable
  *
  * Return: 1 if n is greater than zero
  * 0 if n is zero
