@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
  * jack_bauer - Entry point
@@ -19,12 +17,23 @@ void jack_bauer(void)
 	{
 		for (minute = 0 ; minute <= 59 ; minute++)
 		{
-			_putchar('0' + hour);
-			_putchar('0' + hour);
-			_putchar(':');
-			_putchar('0' + minute);
-			_putchar('0' + minute);
-			_putchar('\n');
+			if (hour < 10 && minute < 10)
+			{
+				_putchar('0');
+				_putchar('0' + hour);
+				_putchar(':');
+				_putchar('0');
+				_putchar('0' + minute);
+				_putchar('\n');
+			}
+
+			else
+			{
+				_putchar('0' + hour);
+				_putchar(':');
+				_putchar('0' + minute);
+				_putchar('\n');
+			}
 		}
 	}
 }
