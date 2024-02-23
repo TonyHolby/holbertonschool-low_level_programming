@@ -11,11 +11,17 @@
 
 int _isalpha(int c)
 {
-	if (c >= ['a'-'z'] && c <= ['A'-'Z'])
+	if (c >= 'a' && c <= 'z')
 		return (1);
 
-	else if (c >= [65-90] && c <= [97-122])
+	else if (c >= 'A' && c <= 'Z')
 		return (1);
+
+	else if (c >= 65 && c <= 90)
+                return (1);
+
+	else if (c >= 97 && c <= 122)
+                return (1);
 
 	else
 		return (0);
