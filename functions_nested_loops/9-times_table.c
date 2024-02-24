@@ -16,7 +16,7 @@ void times_table(void)
 	{
 		for (col = 0 ; col <= 8 ; col++)
 		{
-			if ((line * col) < 10)
+			if ((line * (col + 1)) < 10)
 			{
 				_putchar('0' + (line * col));
 				_putchar(',');
@@ -33,9 +33,9 @@ void times_table(void)
 			}
 
 		}
-		if (line == 0)
+		if (line <= 1)
 		{
-			_putchar(line * 9);
+			_putchar('0' + (line * 9));
 			_putchar('\n');
 		}
 
