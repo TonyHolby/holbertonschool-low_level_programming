@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_to_98 - Entry point
@@ -13,28 +13,24 @@
 
 void print_to_98(int n)
 {
-	if (n < 98 || n > 98)
+	if (n != 98)
 	{
-		while (n < 98 || n > 98)
+		while (n != 98)
 		{
-			if (n != 98)
-			{
-				_putchar('0' + n);
-				_putchar(',');
-				_putchar(' ');
+			printf("%i", n);
+			printf(", ");
+
+			if (n < 98)
 				n++;
-			}
+
 			else
-			{
-				_putchar('0' + 98);
-				_putchar('\n');
-			}
+				n--;
+
 		}
 	}
 
 	else
 	{
-		_putchar('0' + 98);
-		_putchar('\n');
+		printf("%i \n", 98);
 	}
 }
