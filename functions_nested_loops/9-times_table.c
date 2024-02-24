@@ -18,7 +18,7 @@ void times_table(void)
 		{
 			if ((line * col) <= 10)
 			{
-				_putchar(line * col);
+				_putchar('0' + (line * col));
 				_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
