@@ -16,26 +16,24 @@ void times_table(void)
 	{
 		for (col = 0 ; col <= 9 ; col++)
 		{
-			while (col != 9)
+			if ((line * col) >= 10)
 			{
-				if ((line * col) >= 10)
-				{
-					_putchar('0' + (line * col));
-					_putchar(',');
-					_putchar(' ');
-				}
-
-				else
-				{
-					_putchar('0' + (line * col));
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
-
 				_putchar('0' + (line * col));
-				_putchar('\n');
+				_putchar(',');
+				_putchar(' ');
 			}
+
+			else
+			{
+				_putchar('0' + (line * col));
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
+
+			_putchar('0' + (line * col));
 		}
+
+		_putchar('\n');
 	}
 }
