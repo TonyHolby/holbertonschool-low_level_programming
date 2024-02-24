@@ -19,13 +19,9 @@ void times_table(void)
 			if ((line * col) < 10)
 			{
 				_putchar('0' + (line * col));
-
-				if ((line * (col + 1)) < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
 
 			else
