@@ -9,19 +9,33 @@
 
 void times_table(void)
 {
-	int height = 0;
-	int length = 0;
+	int line = 0;
+	int col = 0;
 
-	for (height = 0 ; height <= 9 ; height++)
+	for (line = 0 ; line <= 9 ; line++)
 	{
-		for (length = 0 ; length <= 9 ; length++)
+		for (col = 0 ; col <= 9 ; col++)
 		{
-			_putchar('0' + (height * length));
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
-		}
+			while (col != 9)
+			{
+				if ((line * col) >= 10)
+				{
+					_putchar('0' + (line * col));
+					_putchar(',');
+					_putchar(' ');
+				}
 
-		_putchar('\n');
+				else
+				{
+					_putchar('0' + (line * col));
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
+
+				_putchar('0' + (line * col));
+				_putchar('\n');
+			}
+		}
 	}
 }
