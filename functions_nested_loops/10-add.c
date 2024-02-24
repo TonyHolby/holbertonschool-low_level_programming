@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * add - Entry point
@@ -12,5 +13,5 @@
 
 int add(int a, int b)
 {
-	return (add(a, b));
+	return (a + b);
 }
