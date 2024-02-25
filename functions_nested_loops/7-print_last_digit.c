@@ -1,18 +1,17 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * print_last_digit - Entry point
  *
  * Description: a function that computes the absolute value of an integer
- * @last_digit: variable
+ * @number: variable
  *
  * Return: last_digit
  */
 
-int print_last_digit(int last_digit)
+int print_last_digit(int number)
 {
-	last_digit = last_digit % 10;
+	int last_digit = number % 10;
 
 	if (last_digit < 0)
 	{
