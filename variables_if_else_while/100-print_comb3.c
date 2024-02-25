@@ -22,16 +22,11 @@ int main(void)
 
 		for (num2 = 1 ; num2 <= 9; num2++)
 		{
-			if (num1 == 8 && num2 == 9)
-			{
-				putchar('0' + num1);
-				putchar('0' + num2);
-			}
+			putchar('0' + num1);
+			putchar('0' + num2);
 
-			else
+			while (num1 != 8 && num2 != 9)
 			{
-				putchar('0' + num1);
-				putchar('0' + num2);
 				putchar(',');
 				putchar(' ');
 			}
