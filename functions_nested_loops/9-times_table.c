@@ -24,10 +24,10 @@ void times_table(void)
 			}
 			else if (col == 9)
 			{
-				_putchar('0' + ((line * col) / 10));
-				_putchar('0' + ((line * col) % 10));
+				_putchar('0' + (line * col));
+				_putchar('0' + (line * col));
 			}
-			else if ((line * col) > 10)
+			else if ((line * col) >= 10)
 			{
 				_putchar('0' + ((line * col) / 10));
 				_putchar('0' + ((line * col) % 10));
