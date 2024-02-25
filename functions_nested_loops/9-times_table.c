@@ -2,9 +2,7 @@
 
 /**
  * times_table - Entry point
- *
  * Description: a function that prints the 9 times table, starting with 0
- *
  */
 
 void times_table(void)
@@ -22,18 +20,15 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			else if (col == 9)
+			else if (line <= 1 && col == 9)
 			{
-				if (line <= 1)
-				{
-					_putchar(' ');
-					_putchar('0' + (line * col));
-				}
-				else
-				{
+				_putchar(' ');
+				_putchar('0' + (line * col));
+			}
+			else if (line > 1 && col == 9)
+			{
 				_putchar('0' + ((line * col) / 10));
 				_putchar('0' + ((line * col) % 10));
-				}
 			}
 			else if ((line * col) >= 10)
 			{
