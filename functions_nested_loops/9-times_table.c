@@ -14,17 +14,25 @@ void times_table(void)
 
 	for (line = 0 ; line <= 9 ; line++)
 	{
-		for (col = 0 ; col <= 8 ; col++)
+		for (col = 0 ; col <= 9 ; col++)
 		{
-			if ((line * col) < 10)
+			if (col == 0)
 			{
-				if ((line * (col + 1)) < 10)
-				{
 				_putchar('0' + (line * col));
 				_putchar(',');
 				_putchar(' ');
+			}
+			else if ((line * (col + 1)) < 10)
+			{
 				_putchar(' ');
-				}
+				_putchar('0' + (line * col));
+				_putchar(',');
+				_putchar(' ');
+			}
+			else if (col == 9)
+			{
+				_putchar('0' + ((line * col) / 10));
+				_putchar('0' + ((line * col) % 10));
 			}
 			else
 			{
@@ -34,16 +42,6 @@ void times_table(void)
 				_putchar(' ');
 			}
 		}
-		if (line <= 1)
-		{
-			_putchar('0' + (line * 9));
-			_putchar('\n');
-		}
-		else
-		{
-			_putchar('0' + ((line * 9) / 10));
-			_putchar('0' + ((line * 9) % 10));
-			_putchar('\n');
-		}
+		_putchar('\n');
 	}
 }
