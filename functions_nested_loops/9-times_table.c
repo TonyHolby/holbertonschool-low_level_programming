@@ -27,17 +27,17 @@ void times_table(void)
 				_putchar('0' + ((line * col) / 10));
 				_putchar('0' + ((line * col) % 10));
 			}
-			else if ((line * (col + 1)) < 10)
+			else if ((line * (col + 1)) > 10)
 			{
-				_putchar(' ');
-				_putchar(line * col);
+				_putchar('0' + ((line * col) / 10));
+				_putchar('0' + ((line * col) % 10));
 				_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
-				_putchar('0' + ((line * col) / 10));
-				_putchar('0' + ((line * col) % 10));
+				_putchar(' ');
+				_putchar('0' + (line * col));
 				_putchar(',');
 				_putchar(' ');
 			}
