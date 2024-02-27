@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * FizzBuzz - Entry point
+ * main - Entry point
  *
  * Description: a program that prints the numbers from 1 to 100,
  * followed by a new line
@@ -14,23 +14,23 @@
  * Return: 0
  */
 
-int FizzBuzz(void)
+int main(void)
 {
 	int num;
 
-	for (num = 0 ; num <= 100 ; num++)
+	for (num = 1 ; num <= 100 ; num++)
 	{
 		if (num % 3 == 0)
 		{
-			printf("%iFizz ");
+			printf("Fizz ");
 		}
 		else if (num % 5 == 0)
 		{
-			printf("%iBuzz ");
+			printf("Buzz ");
 		}
 		else if (num % 3 == 0 && num % 5 == 0)
 		{
-			printf("%iFizzBuzz ");
+			printf("FizzBuzz ");
 		}
 		else
 		{
