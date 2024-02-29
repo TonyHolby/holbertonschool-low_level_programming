@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * rev_string - Entry point
@@ -11,20 +10,20 @@
 
 void rev_string(char *s)
 {
-	int i, letter;
+	int i = 0;
+	int j = 0;
+	int c = 0;
 	int length_of_s = 0;
-	char reverse_of_s[] = ;
+	char *reverse_of_s;
 
-	reverse_of_s = s[(length_of_s - 1) - i];
-
-	for (letter = 0; s[letter] != '\0'; letter++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
 		length_of_s++;
 	}
 
-	for (i = 0; i < length_of_s; i++)
+	for (i = (length_of_s - 1); i >= 0; i--)
 	{
-		reverse_of_s[i] = s[(length_of_s - 1) - i];
+		reverse_of_s[j] = s[i];
+		j++;
 	}
-	reverse_of_s[length_of_s] = '\0';
 }
