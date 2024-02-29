@@ -11,3 +11,17 @@
 
 void puts2(char *str)
 {
+	int c, i;
+	int length = 0;
+
+	for (c = 0; str[c] != '\0'; c++)
+	{
+		length++;
+	}
+
+	for (i = 0; i < (length - 1); i += 2)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
+}
