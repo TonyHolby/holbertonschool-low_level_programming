@@ -14,17 +14,17 @@ void rev_string(char *s)
 	int j = 0;
 	int c = 0;
 	int length_of_s = 0;
-	char reverse_of_s[10];
+	char temp;
 
 	for (c = 0; s[c] != '\0'; c++)
 	{
 		length_of_s++;
 	}
 
-	for (i = 0, j = (length_of_s - 1); i <= (length_of_s - 1), j >= 0; i++, j--)
+	for (i = 0, j = (length_of_s - 1); i < j; i++, j--)
 	{
-		reverse_of_s[i] = s[i];
+		temp = s[i];
 		s[i] = s[j];
-		s[j] = reverse_of_s[i];
+		s[j] = temp;
 	}
 }

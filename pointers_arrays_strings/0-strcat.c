@@ -30,7 +30,7 @@ char *_strcat(char *dest, char *src)
 
 	for (c = 0; dest[c] != '\0'; c++)
 	{
-		src[length_src + c] = dest[c];
+		dest[j] = src[c];
 		src++;
 	}
 
