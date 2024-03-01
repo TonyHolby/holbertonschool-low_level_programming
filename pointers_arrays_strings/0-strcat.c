@@ -28,12 +28,12 @@ char *_strcat(char *dest, char *src)
 		length_dest++;
 	}
 
-	for (c = 0; c < length_src; c++)
+	for (c = 0; c <= length_src; c++)
 	{
 		dest[length_dest + c] = src[c];
 	}
 
-	dest[c] = '\0';
+	dest[length_dest + length_src] = '\0';
 
 	return (dest);
 }
