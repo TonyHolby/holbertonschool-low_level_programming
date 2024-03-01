@@ -12,26 +12,29 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char string_src[20];
-	char string_dest[20];
-	int i = 0, j = 0;
-	
-	src = string_src;
-	dest = string_dest;
+	int i = 0;
+	int j = 0;
+	int c = 0;
+	int length_src = 0;
+	int length_dest = 0;
 
-	while (string_src[20] != '\0')
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		++src;
-		i++;
+		length_src++;
 	}
 
-	while (string_dest[20] != '\0')
+	for (j = 0; dest[j] != '\0'; j++)
 	{
-		*src = *dest;
+		length_dest++;
+	}
+
+	for (c = 0; dest[c] != '\0'; c++)
+	{
+		src[length_src + c] = dest[c];
 		src++;
-		dest++;
-		j++;
 	}
+
+	dest[c] = '\0';
 
 	return (dest);
 }
