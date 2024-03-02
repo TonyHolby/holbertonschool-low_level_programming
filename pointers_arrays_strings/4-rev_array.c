@@ -14,7 +14,7 @@ void reverse_array(int *a, int n)
 	int length_array = 0;
 	int temp[n];
 
-	for (c = 0; a©[c] != '\0'; c++)
+	for (c = 0; a[c] != '\0'; c++)
 	{
 		length_array++;
 	}
