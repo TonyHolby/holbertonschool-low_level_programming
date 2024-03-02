@@ -15,7 +15,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int i = 0, j = 0, k = 0;
 	int length_s1 = 0, length_s2 = 0;
-	int value_s1 = 0, value_s2 = 0;
+	int value = 0;
 
 
 	for (i = 0; s1[i] != '\0'; i++)
@@ -28,42 +28,27 @@ int _strcmp(char *s1, char *s2)
 		length_s2++;
 	}
 
-	if (length_s1 < length_s2)
+	for (k = 0; k != '\0' && length_s1 == length_s2; k++)
 	{
-		for (k = 0; k <= length_s1; k++)
+		if (s1[k] == s2[k])
 		{
-			value_s1 = value_s1 + s1[k];
-			value_s2 = value_s2 + s2[k];
+			value = 0;
 		}
-		return (value_s1 - value_s2);
-	}
-
-	else if (length_s1 > length_s2)
-	{
-		for (k = 0; k <= length_s2; k++)
-		{
-			value_s1 = value_s1 + s1[k];
-			value_s2 = value_s2 + s2[k];
-		}
-		return (value_s1 - value_s2);
-	}
-
-	else
-	{
-		if (value_s1 == value_s2)
-		{
-			return (0);
-		}
-
 		else
 		{
-			for (k = 0; k != '\0'; k++)
-			{
-				value_s1 = value_s1 + s1[k];
-				value_s2 = value_s2 + s2[k];
-			}
-			return (value_s1 - value_s2);
+			value = s1[k] - s2[k];
 		}
 	}
 
+	for (k = 0; k != '\0' && length_s1 < length_s2; k++)
+	{
+		value = s2[k] - '\0';
+	}
+
+	for (k = 0; k != '\0' && length_s1 > length_s2; k++)
+	{
+		value = s1[k] - '\0';
+	}
+
+	return (value);
 }
