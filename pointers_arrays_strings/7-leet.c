@@ -23,10 +23,6 @@ char *leet(char *str_encoded)
 			{
 				str_encoded[i] = str_encoded[j];
 			}
-			else
-			{
-				continue;
-			}
 		}
 	}
 	return (str_encoded);
