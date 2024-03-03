@@ -12,7 +12,7 @@
 
 char *string_toupper(char *string)
 {
-	int i, j, c, length_string = 0;
+	int i, j, k, c, length_string = 0;
 
 	for (c = 0; string[c] != '\0'; c++)
 	{
@@ -21,11 +21,11 @@ char *string_toupper(char *string)
 
 	for (i = 0; i < (length_string - 1); i++)
 	{
-		for (j = 'A'; j <= 'Z'; j++)
+		for (j = 'a', k = 'A'; j <= 'z'; j++, k++)
 		{
-			if (i == j)
+			if (string[i] == j)
 			{
-				string[i] = j;
+				string[i] = k;
 			}
 		}
 	}
