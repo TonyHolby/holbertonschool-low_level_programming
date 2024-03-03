@@ -30,10 +30,11 @@ int _strcmp(char *s1, char *s2)
 		{
 			value = 0;
 		}
-		
+
 		else
 		{
 			value = s1[k] - s2[k];
+			break;
 		}
 	}
 
