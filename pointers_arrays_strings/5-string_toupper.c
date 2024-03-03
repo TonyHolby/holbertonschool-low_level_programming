@@ -19,7 +19,7 @@ char *string_toupper(char *string)
 		length_string++;
 	}
 
-	for (i = 0; i < (length_string - 1); i++)
+	for (i = 0; i <= (length_string - 1); i++)
 	{
 		for (j = 'a', k = 'A'; j <= 'z'; j++, k++)
 		{
