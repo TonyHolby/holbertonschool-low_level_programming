@@ -7,7 +7,7 @@
  * Description: a function that capitalizes all words of a string
  * @the_string: string
  *
- * Return: the value of the string
+ * Return: the value of the_string
  */
 
 char *cap_string(char *the_string)
