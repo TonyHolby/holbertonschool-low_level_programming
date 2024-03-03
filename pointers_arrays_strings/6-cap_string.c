@@ -1,5 +1,6 @@
 #include "main.h"
-#include "5-string_toupper.c"
+#include <ctype.h>
+#include <string.h>
 
 /**
  * cap_string - Entry point
@@ -12,20 +13,22 @@
 
 char *cap_string(char *the_string)
 {
-	int i, c, length_the_string = 0;
-	char sp = {'	'; ' '; '\n'; ','; ';'; '.'; '!'; '?'; '"'; '('; ')'; '{'; '}'};
+	int i = 0;
+	char separator[] = " \n,;.!?(){}	";
 
-	for (c = 0; the_string[c] != '\0'; c++)
+	while (the_string[i] != '\0')
 	{
-		length_the_string++;
-	}
-
-	for (i = 0; i < (length_the_string - 1) || i != '\0'; i++)
-	{
-		if ((the_string[i - 1]) == sp[i])
+		if (i == 0 || strchr(separator, the_string[i - 1]) != NULL)
 		{
-			the_string[i] = string_toupper(the_string[i]);
+			the_string[i] = toupper(the_string[i]);
 		}
+
+		else
+		{
+			continue;
+		}
+
+		i++;
 	}
 
 	return (the_string);
