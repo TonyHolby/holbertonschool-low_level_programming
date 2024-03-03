@@ -5,23 +5,24 @@
  *
  * Description: a function that compares two strings
  * @a: integer
- * @n: integer 
+ * @n: integer
  */
 
 void reverse_array(int *a, int n)
 {
-	int i = 0, j = 0, c = 0;
-	int length_array = 0;
-	int temp[n];
+	int i = 0, c = 0, tab_temp;
+	int j = n - 1;
+	int length_a = 0;
 
 	for (c = 0; a[c] != '\0'; c++)
 	{
-		length_array++;
+		length_a++;
 	}
 
-	for (i = 0, j = (length_array - 1); i < j; i++, j--)
+	for (i = 0; i < j; i++, j--)
 	{
-		temp[i] = a[i];
-		a[i] = temp[j];
+		tab_temp = a[i];
+		a[i] = a[j];
+		a[j] = tab_temp;
 	}
 }
