@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
  * leet - Entry point
@@ -11,34 +12,21 @@
 
 char *leet(char *str_encoded)
 {
-	int i, c, length_str = 0;
+	int i, j;
+	char *letter = "aAeEoOtTlL";
 
-	for (c = 0; str_encoded[c] != '\0'; c++)
+	for (i = 0; i < _strlen(str_encoded); i++)
 	{
-		length_str++;
-	}
-
-	for (i = 0; i < (length_str - 1); i++)
-	{
-		if (i == 'a' || i == 'A')
+		for (j = 0; j < _strlen(letter); j++)
 		{
-			str_encoded[i] = '4';
-		}
-		else if (i == 'e' || i == 'E')
-		{
-			str_encoded[i] = '3';
-		}
-		else if (i == 'o' || i == 'O')
-		{
-			str_encoded[i] = '0';
-		}
-		else if (i == 't' || i == 'T')
-		{
-			str_encoded[i] = '7';
-		}
-		else if (i == 'l' || i == 'L')
-		{
-			str_encoded[i] = '1';
+			if (i == j)
+			{
+				str_encoded[i] = str_encoded[j];
+			}
+			else
+			{
+				continue;
+			}
 		}
 	}
 	return (str_encoded);
