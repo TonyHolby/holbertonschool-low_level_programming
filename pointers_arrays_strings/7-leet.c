@@ -14,14 +14,15 @@ char *leet(char *str_encoded)
 {
 	int i, j;
 	char *letter = "aAeEoOtTlL";
+	char *encode = "4433007711";
 
 	for (i = 0; i < _strlen(str_encoded); i++)
 	{
 		for (j = 0; j < _strlen(letter); j++)
 		{
-			if (i == j)
+			if (str_encoded[i] == letter[j])
 			{
-				str_encoded[i] = str_encoded[j];
+				str_encoded[i] = encode[j];
 			}
 		}
 	}
