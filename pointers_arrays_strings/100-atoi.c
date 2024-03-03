@@ -1,33 +1,50 @@
 #include "main.h"
 
 /**
- * print_rev - Entry point
+ * _atoi - Entry point
  *
- * Description: a function that prints a string, in reverse,
- * followed by a new line
+ * Description: a function that convert a string to an integer
  * @s: string
  *
- * Return: the length of the string
+ * Return: 0 if there no numbers in the string and otherwise the number
  */
 
 int _atoi(char *s)
 {
-	int c;
+	int c, i, j, length = 0;
+	int sign = 0;
+	int number = 0;
 
-	for (c = 0; str[c] != '\0'; c++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
 		length++;
 	}
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < (length - 1); i++)
 	{
-		if (s == i)
+		if (s[i] == '\t' || s[i] == '\n' || s[i] == '\v' || s[i] == '\f' ||
+				s[i] == '\r' || s[i] == ' ')
+			continue;
+		if (s[i] == '-')
+			sign--;
+		else if (s[i] == '+')
+			sign++;
+		for (j = 0; j <= 9; j++)
 		{
-			m
+			if (s[i] == j)
+				++number;
 		}
-		else
-		{
-			return (0);
-		}
+	}
+	if (sign % 2 == 0)
+	{
+		return (number);
+	}
+	else if (sign % 2 != 0)
+	{
+		return (-number);
+	}
+	else
+	{
+		return (0);
 	}
 }

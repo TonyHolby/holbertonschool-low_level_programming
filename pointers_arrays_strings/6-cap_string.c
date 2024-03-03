@@ -13,17 +13,18 @@
 char *cap_string(char *the_string)
 {
 	int i, c, length_the_string = 0;
+	char sp = {'	'; ' '; '\n'; ','; ';'; '.'; '!'; '?'; '"'; '('; ')'; '{'; '}'};
 
 	for (c = 0; the_string[c] != '\0'; c++)
 	{
 		length_the_string++;
 	}
 
-	for (i = 0; i < (length_the_string - 1); i++)
+	for (i = 0; i < (length_the_string - 1) || i != '\0'; i++)
 	{
-		if ((the_string[i - 1]) == ' ')
+		if ((the_string[i - 1]) == sp[i])
 		{
-			the_string[i] == string_toupper[i];
+			the_string[i] = string_toupper(the_string[i]);
 		}
 	}
 
