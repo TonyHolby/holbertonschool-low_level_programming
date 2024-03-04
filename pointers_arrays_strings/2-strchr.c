@@ -26,7 +26,7 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (pointer == NULL)
+	if (s[i] == '\0')
 	{
 		pointer = "NULL";
 	}
