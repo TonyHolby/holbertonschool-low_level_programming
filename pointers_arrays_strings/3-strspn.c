@@ -1,6 +1,5 @@
 #include "main.h"
 #include "2-strlen.c"
-#include "3-strcmp.c"
 
 /**
  * _strspn - Entry point
