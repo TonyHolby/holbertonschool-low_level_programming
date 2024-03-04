@@ -21,9 +21,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			pointer = &s[i - 1];
+			pointer = &s[i];
+			break;
 		}
-
 		else if (s[i] == '\0')
 		{
 			pointer = "NULL";
