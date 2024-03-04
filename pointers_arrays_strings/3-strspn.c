@@ -16,18 +16,13 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i, j, nb_bytes = 0;
 
-	for (i = 0; s[i] != ','; i++)
+	for (i = 0; s[i] != ' '; i++)
 	{
 		for (j = 0; j < _strlen(accept); j++)
 		{
 			if (s[i] == accept[j])
 			{
 				nb_bytes++;
-			}
-
-			else
-			{
-				continue;
 			}
 		}
 	}
