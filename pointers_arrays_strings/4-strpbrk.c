@@ -23,14 +23,14 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				pointer_to_the_first_occurence = &s[j];
-			}
-
-			else if (s[i] == '\0')
-			{
-				pointer_to_the_first_occurence = "NULL";
+				pointer_to_the_first_occurence = &s[i];
+				break;
 			}
 		}
+	}
+	if (s[i] == '\0')
+	{
+		pointer_to_the_first_occurence = "NULL";
 	}
 
 	return (pointer_to_the_first_occurence);
