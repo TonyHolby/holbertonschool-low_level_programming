@@ -1,6 +1,5 @@
 #include "main.h"
 #include "2-strlen.c"
-#include <stddef.h>
 
 /**
  * _strchr - Entry point
@@ -24,11 +23,13 @@ char *_strchr(char *s, char c)
 		{
 			pointer = "NULL";
 		}
+
 		else
 		{
 			pointer = &s[i];
 			break;
 		}
 	}
+
 	return (pointer);
 }
