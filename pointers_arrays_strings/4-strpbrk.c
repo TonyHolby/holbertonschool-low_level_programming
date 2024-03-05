@@ -15,7 +15,7 @@
 char *_strpbrk(char *s, char *accept)
 {
 	int i, j;
-	char *pointer_to_the_first_occurence;
+	char *first_occurence;
 
 	for (i = 0; i < _strlen(s); i++)
 	{
@@ -23,15 +23,11 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				pointer_to_the_first_occurence = &s[i];
-				break;
+				first_occurence = &s[i];
+				return (first_occurence);
 			}
 		}
 	}
-	if (s[i] == '\0')
-	{
-		pointer_to_the_first_occurence = "NULL";
-	}
 
-	return (pointer_to_the_first_occurence);
+	return (NULL);
 }
