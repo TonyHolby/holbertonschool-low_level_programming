@@ -14,23 +14,29 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i = 0, j = 0;
 	char *pointer_to_the_beginning;
 
-	for (i = 0; i < _strlen(needle); i++)
+	for (i = 0; i < _strlen(haystack); i++)
 	{
-		for (j = '\t'; j <= _strlen(haystack); j++)
+		if (haystack[i] != needle[j])
 		{
-			if (haystack[j] == needle[i])
+			pointer_to_the_beginning = "NULL";
+		}
+
+		for (j = 1; j < _strlen(needle); j++)
+		{
+			i++;
+			if (haystack[i] == needle[j])
 			{
-				pointer_to_the_beginning = &haystack[j];
-				break;
+				continue;
+			}
+			if (needle[j] == '\0')
+			{
+				pointer_to_the_beginning = needle;
 			}
 		}
 	}
-	if (haystack[j] == '\0')
-	{
-		pointer_to_the_beginning = "NULL";
-	}
+
 	return (pointer_to_the_beginning);
 }
