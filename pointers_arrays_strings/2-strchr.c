@@ -19,17 +19,19 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; i < _strlen(s); i++)
 	{
-		if (s[i] != c)
-		{
-			pointer = '\0';
-		}
-
-		else
+		if (s[i] == c)
 		{
 			pointer = &s[i];
 			break;
 		}
 	}
-
-	return (pointer);
+	if (s[i] == '\0' || c == '\0')
+	{
+		return ('\0');
+	}
+			
+	else
+	{
+		return (pointer);
+	}
 }
