@@ -15,7 +15,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *pointer = s;
+	char *pointer;
 
 	for (i = 0; i < _strlen(s); i++)
 	{
