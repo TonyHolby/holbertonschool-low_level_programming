@@ -9,7 +9,7 @@
  * @c: char
  *
  * Return: a pointer to the first occurence of the character c in the string s
- * else returns "NULL"
+ * else returns NULL
  */
 
 char *_strchr(char *s, char c)
@@ -17,17 +17,16 @@ char *_strchr(char *s, char c)
 	int i;
 	char *pointer;
 
-	for (i = 0; i < _strlen(s); i++)
-	{
-		if (s[i] != c || s[i] == '\0' || c == '\0')
+	for (i = 0; i <= _strlen(s); i++)
+	{	
+		if (s[i] == c)
 		{
-			pointer = "NULL";
+			return (&s[i]);
 		}
 
 		else
 		{
-			pointer = &s[i];
-			break;
+			pointer = "NULL";
 		}
 	}
 
