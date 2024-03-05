@@ -15,20 +15,14 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *pointer;
 
-	for (i = 0; i <= _strlen(s); i++)
-	{	
+	for (i = 0; s[i] != '\0'; i++)
+	{
 		if (s[i] == c)
 		{
 			return (&s[i]);
 		}
-
-		else
-		{
-			pointer = "NULL";
-		}
 	}
 
-	return (pointer);
+	return (NULL);
 }
