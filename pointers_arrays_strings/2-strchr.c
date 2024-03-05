@@ -16,11 +16,15 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *pointer = "NULL";
+	char *pointer = s;
 
 	for (i = 0; i < _strlen(s); i++)
 	{
-		if (s[i] == c)
+		if (s[i] != c)
+		{
+			pointer = "NULL";
+		}
+		else
 		{
 			pointer = &s[i];
 			break;
