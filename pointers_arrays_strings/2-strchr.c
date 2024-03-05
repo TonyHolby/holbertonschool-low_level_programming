@@ -16,7 +16,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	char *pointer = NULL;
+	char *pointer = "NULL";
 
 	for (i = 0; i < _strlen(s); i++)
 	{
@@ -25,10 +25,6 @@ char *_strchr(char *s, char c)
 			pointer = &s[i];
 			break;
 		}
-	}
-	if (s[i] == '\0')
-	{
-		pointer = "NULL";
 	}
 	return (pointer);
 }
