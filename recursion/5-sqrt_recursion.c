@@ -6,6 +6,11 @@
  * Description: a function that returns the natural square root of a number
  * @n: integer
  *
+ * sqrt_helper - helper function for the recursivity
+ * Description: a function that does recursion
+ * @a: integer
+ * @n: integer
+ *
  * Return: an integer
  */
 
