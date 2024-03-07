@@ -5,6 +5,8 @@
  *
  * Description: a function that returns the factorial of a given number
  * @n: integer
+ *
+ * Return: the factorial of n
  */
 
 int factorial(int n)
