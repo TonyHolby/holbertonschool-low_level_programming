@@ -6,11 +6,6 @@
  * Description: a function that returns the natural square root of a number
  * @n: integer
  *
- * sqrt_helper - helper function for the recursivity
- * Description: a function that does recursion
- * @a: integer
- * @n: integer
- *
  * Return: an integer
  */
 
@@ -25,6 +20,16 @@ int _sqrt_recursion(int n)
 		return (sqrt_helper(n, 0));
 	}
 }
+
+/**
+ * sqrt_helper - helper function for the recursivity
+ *
+ * Description: a function that does recursion
+ * @n: integer
+ * @a: integer
+ *
+ * Return: a call to sqrt_helper function
+ */
 
 int sqrt_helper(int n, int a)
 {
