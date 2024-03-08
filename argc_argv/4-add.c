@@ -12,26 +12,29 @@
 
 int main(int argc, char **argv)
 {
-	int number1, number2, res;
-
-	number1 = atoi(argv[1]);
-	number2 = atoi(argv[2]);
+	int i, j, res;
 
 	if (argc < 3)
 	{
 		printf("0\n");
 		return (0);
 	}
-	else if (isdigit(*argv))
+
+	for (i = 0; i < argc; i++)
 	{
-	        res = number1 + number2;
-		printf("%d\n", res);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+
+		res += atoi(argv[i]);
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+
+	printf("%d\n", res);
 
 	return (0);
 }
