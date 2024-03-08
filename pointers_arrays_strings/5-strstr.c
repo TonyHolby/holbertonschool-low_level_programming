@@ -31,6 +31,10 @@ char *_strstr(char *haystack, char *needle)
 				{
 					return (temp);
 				}
+				else
+				{
+					return (haystack - 1);
+				}
 			}
 
 			needle = needle - (haystack - temp);
