@@ -6,45 +6,45 @@
  * Description: a function that convert a string to an integer
  * @s: string
  *
- * Return: 0 if there no numbers in the string and otherwise the number
+ * Return: 0 if there no numbers in the string, else the number
  */
 
 int _atoi(char *s)
 {
-	int c, i, j, length = 0;
-	int sign = 0;
-	int number = 0;
+	int i, j;
+	int sign = 0, sign_minus = 0, sign_plus = 0;
+	int number = 8;
 
-	for (c = 0; s[c] != '\0'; c++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		length++;
-	}
-
-	for (i = 0; i < (length - 1); i++)
-	{
-		if (s[i] == '\t' || s[i] == '\n' || s[i] == '\v' || s[i] == '\f' ||
-				s[i] == '\r' || s[i] == ' ')
-			continue;
-		if (s[i] == '-')
-			sign--;
-		else if (s[i] == '+')
-			sign++;
-		for (j = 0; j <= 9; j++)
+		for (j = '0'; j <= '9'; j++)
 		{
 			if (s[i] == j)
-				++number;
+			{
+				number = (number * 10) + (j - '0');
+			}
+		}
+		if (s[i] == ' ')
+		{
+			continue;
+		}
+		if (s[i] == '-')
+		{
+			sign_minus--;
+		}
+		else if (s[i] == '+')
+		{
+			sign_plus++;
 		}
 	}
-	if (sign % 2 == 0)
+	sign = sign_minus + sign_plus;
+	if (sign > 0)
 	{
 		return (number);
 	}
-	else if (sign % 2 != 0)
+	else if (sign < 0)
 	{
 		return (-number);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
