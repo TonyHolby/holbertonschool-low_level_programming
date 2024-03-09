@@ -7,26 +7,29 @@
  * Description: a function that capitalizes all words of a string
  * @the_string: string
  *
- * Return: the value of the_string
+ * Return: a string
  */
 
 char *cap_string(char *the_string)
 {
-	int i, j, c, length_the_string = 0;
-	char *sp = " \n,;.!?'\"(){}	";
+	int i, j, k;
 
-	for (c = 0; the_string[c] != '\0'; c++)
+	for (i = 0; the_string[i] != '\0'; i++)
 	{
-		length_the_string++;
-	}
-
-	for (i = 0; i < (length_the_string - 1) || i != '\0'; i++)
-	{
-		if ((the_string[i - 1]) == sp[i])
+		if (the_string[i] == ' ' ||
+			       	the_string[i] == '\t' || the_string[i] == '\n' ||
+			       	the_string[i] == ',' || the_string[i] == ';' ||
+			       	the_string[i] == '.' || the_string[i] == '!' ||
+			       	the_string[i] == '?' || the_string[i] == '"' ||
+			       	the_string[i] == '(' || the_string[i] == ')' ||
+			       	the_string[i] == '{' || the_string[i] == '}')
 		{
-			for (j = 'a'; j <= 'z'; j++)
+			for (j = 'a', k = 'A'; j <= 'z'; j++, k++)
 			{
-				the_string[i] = the_string[j];
+				if (the_string[i + 1] == j)
+				{
+					the_string[i + 1] = k;
+				}
 			}
 		}
 	}
