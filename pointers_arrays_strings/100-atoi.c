@@ -11,22 +11,19 @@
 
 int _atoi(char *s)
 {
-	int i, j;
+	int i;
 	int sign = 1;
 	int number = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		if (s[i] >= '0' && s[i] <= '9')
 		{
-			if (s[i] == j)
+			number = (number * 10) + (s[i] - '0');
+			if (s[(i + 1)] == ' ')
 			{
-				number = (number * 10) + (j - '0');
+				break;
 			}
-		}
-		if (s[i] == ' ')
-		{
-			continue;
 		}
 		if (s[i] == '-')
 		{
