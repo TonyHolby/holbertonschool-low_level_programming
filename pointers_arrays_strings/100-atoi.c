@@ -12,8 +12,8 @@
 int _atoi(char *s)
 {
 	int i, j;
-	int sign = 0, sign_minus = 0, sign_plus = 0;
-	int number = 8;
+	int sign = 1;
+	int number = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -30,21 +30,19 @@ int _atoi(char *s)
 		}
 		if (s[i] == '-')
 		{
-			sign_minus--;
+			sign = -sign;
 		}
 		else if (s[i] == '+')
 		{
-			sign_plus++;
+			sign = +sign;
 		}
 	}
-	sign = sign_minus + sign_plus;
-	if (sign > 0)
+	if (sign > 0 || sign < 0)
 	{
-		return (number);
+		return (sign * number);
 	}
-	else if (sign < 0)
+	else
 	{
-		return (-number);
+		return (0);
 	}
-	return (0);
 }
