@@ -14,19 +14,22 @@
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
-	char *ar = malloc(size * sizeof(char));
+	char *ar = NULL;
+
+	ar = malloc(size * sizeof(char));
 
 	for (i = 0; i < size; i++)
 	{
 		ar[i] = c;
 	}
 
-	if (size != 0 || *ar != '\0')
+	if (size == 0 || ar == NULL)
 	{
-		return (ar);
+		return (NULL);
 	}
+
 	else
 	{
-		return ('\0');
+		return (ar);
 	}
 }
