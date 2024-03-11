@@ -37,5 +37,10 @@ char *_strdup(char *str)
 		duplicata[i] = str[i];
 	}
 
+	if (duplicata != str)
+	{
+		return (0);
+	}
+
 	return (duplicata);
 }
