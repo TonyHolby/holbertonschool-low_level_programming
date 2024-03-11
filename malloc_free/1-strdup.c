@@ -12,19 +12,30 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i;
-	unsigned int size_of_ar = 12;
-	char *ar = malloc(size_of_ar * sizeof(char));
-
-	for (i = 0; i < size_of_ar; i++)
+	unsigned int i, length = 0;
+	char *duplicata = NULL;
+	
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		ar[i] = str[i];
+		length++;
 	}
 
-	if (*str == '\0')
+	if (length == 0)
 	{
-		return ('\0');
+		return (NULL);
 	}
 
-	return (ar);
+	duplicata = malloc(length * sizeof(char));
+
+	if (duplicata == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < length; i++)
+	{
+		duplicata[i] = str[i];
+	}
+
+	return (duplicata);
 }
