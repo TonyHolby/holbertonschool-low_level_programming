@@ -12,7 +12,7 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i, length = 0;
+	unsigned int i, j, length = 0;
 	char *duplicata = NULL;
 
 	for (i = 0; str[i] != '\0'; i++)
@@ -32,14 +32,9 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	for (i = 0; i < (length - 1); i++)
+	for (j = 0; j < (length - 1); j++)
 	{
-		duplicata[i] = str[i];
-	}
-
-	if (duplicata != str)
-	{
-		return (0);
+		duplicata[j] = str[j];
 	}
 
 	return (duplicata);
