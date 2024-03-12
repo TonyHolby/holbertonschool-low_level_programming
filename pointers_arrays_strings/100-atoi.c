@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * _atoi - Entry point
  *
@@ -13,7 +13,7 @@ int _atoi(char *s)
 {
 	int i;
 	int sign = 1;
-	int number = 0;
+	unsigned int number = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
