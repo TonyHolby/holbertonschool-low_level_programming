@@ -7,7 +7,7 @@
  * @s1: string
  * @s2: string
  *
- * Return: NULL if s1 = NULL s2 = NULL, else a pointer which contains
+ * Return: NULL if s1 or s2 = NULL, else a pointer which contains
  * s1 followed by s2
  */
 
@@ -16,9 +16,14 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j, k = 0, l = 0, length_s1 = 0, length_s2 = 0;
 	char *c = NULL;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (NULL);
+		s1 = "";
+	}
+
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 
 	for (i = 0; s1[i] != '\0'; i++)
