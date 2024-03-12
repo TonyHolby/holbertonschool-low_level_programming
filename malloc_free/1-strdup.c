@@ -15,14 +15,14 @@ char *_strdup(char *str)
 	unsigned int i, j, length = 0;
 	char *duplicata = NULL;
 
+	if (str != NUL)
+	{
+		return (NULL);
+	}
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		length++;
-	}
-
-	if (length == 0)
-	{
-		return (NULL);
 	}
 
 	duplicata = malloc((length + 1) * sizeof(char));
@@ -38,11 +38,6 @@ char *_strdup(char *str)
 	}
 
 	duplicata[length] = '\0';
-
-	if (duplicata < str)
-	{
-		return (NULL);
-	}
 
 	return (duplicata);
 }
