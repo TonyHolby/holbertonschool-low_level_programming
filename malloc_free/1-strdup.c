@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	unsigned int i, j, length = 0;
 	char *duplicata = NULL;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] == '\0'; i++)
 	{
 		length++;
 	}
