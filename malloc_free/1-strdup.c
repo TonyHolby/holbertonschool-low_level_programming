@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	unsigned int i, j, length = 0;
 	char *duplicata = NULL;
 
-	for (i = 0; str[i] == '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		length++;
 	}
@@ -25,17 +25,19 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	duplicata = malloc(length * sizeof(char));
+	duplicata = malloc((length + 1) * sizeof(char));
 
 	if (duplicata == NULL)
 	{
 		return (NULL);
 	}
 
-	for (j = 0; j < (length - 1); j++)
+	for (j = 0; j < length; j++)
 	{
 		duplicata[j] = str[j];
 	}
+
+	duplicata[length] = '\0';
 
 	return (duplicata);
 }
