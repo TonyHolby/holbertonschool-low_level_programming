@@ -39,5 +39,10 @@ char *_strdup(char *str)
 
 	duplicata[length] = '\0';
 
+	if (duplicata < str)
+	{
+		return (NULL);
+	}
+
 	return (duplicata);
 }
