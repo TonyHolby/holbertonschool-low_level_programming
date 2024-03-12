@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	unsigned int i, j, length = 0;
 	char *duplicata = NULL;
 
-	if (str != NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
