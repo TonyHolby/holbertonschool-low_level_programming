@@ -13,14 +13,14 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
-	unsigned int *allocated_memory;
+	unsigned int **allocated_memory;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 
-	allocated_memory = calloc(nmemb, sizeof(unsigned int));
+	allocated_memory = calloc(nmemb, sizeof(unsigned int *));
 
 	if (allocated_memory == NULL)
 	{
