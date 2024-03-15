@@ -20,14 +20,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	allocated_memory = malloc(nmemb * sizeof(int));
+	allocated_memory = malloc(size * sizeof(int));
 
 	if (allocated_memory == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < nmemb; i++)
 	{
 		allocated_memory[i] = 0;
 	}
