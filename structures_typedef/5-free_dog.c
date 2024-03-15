@@ -4,7 +4,7 @@
  * free_dog - Entry point
  *
  * Description: a function that frees dogs
- * @d: type dog 
+ * @d: type dog
  */
 
 void free_dog(dog_t *d)
