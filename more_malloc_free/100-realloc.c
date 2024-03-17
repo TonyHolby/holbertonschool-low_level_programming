@@ -4,6 +4,7 @@
  * _realloc - Entry point
  *
  * Description: a function that reallocates a memory block
+ * @ptr: pointer
  * @old_size: unsigned integer
  * @new_size: unsigned integer
  *
@@ -14,24 +15,23 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	if (old_size == 0)
 	{
-		return (NULL);
+		return (malloc(new_size));
 	}
 
 	ptr = malloc(old_size * sizeof(unsigned int));
 
 	if (ptr == NULL)
 	{
-		return (NULL);
+		return (malloc(new_size));
 	}
-
-	free(ptr);
 
 	if (new_size == 0)
 	{
+		free(ptr);
 		return (NULL);
 	}
 
-	ptr = malloc(new_size * sizeof(unsigned int));
+	ptr = malloc(new_size);
 
 	if (ptr == NULL)
 	{
