@@ -8,7 +8,7 @@
  * @size: integer
  * @cmp: function pointer to an integer
  *
- * Return: an integer
+ * Return: the index of the array that matches
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -22,11 +22,15 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	while (i <= size && cmp(array[i]) == 0)
 	{
-		if (i == size)
+
+		if (i < size)
+		{
+			i++;
+		}
+		else
 		{
 			return (-1);
 		}
-		i++;
 	}
 	return (i);
 }
