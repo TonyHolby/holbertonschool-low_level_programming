@@ -8,7 +8,9 @@
  * @array: array of integer
  * @size: variable of type size_t
  * @action: function pointer to an integer
- *
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
+{
+	action(array[size]);
+}
