@@ -1,12 +1,13 @@
 #include "3-calc.h"
 
 /**
- * print_name - Entry point
+ * main - Entry point
  *
  * Description: a function that prints a name
- * @name: string
- * @f: function pointer to a string
+ * @argc: number of arguments
+ * @argv: string
  *
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
