@@ -20,16 +20,20 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
+
 	if (op == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
+
 	if ((*op == '/' || *op == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	return ((*get_op_func(op))(a, b));
+	printf("%d\n", (*get_op_func(op))(a, b));
+
+	return (0);
 }
