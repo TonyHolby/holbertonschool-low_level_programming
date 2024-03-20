@@ -27,7 +27,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		}
 
-		if (i < (n - 1) && separator != NULL && args != NULL)
+		if (separator == NULL)
+		{
+			continue;
+		}
+		if (args == NULL)
+		{
+			continue;
+		}
+		if (i < (n - 1))
 		{
 			printf("%s", separator);
 		}
