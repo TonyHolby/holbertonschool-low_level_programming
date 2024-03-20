@@ -12,15 +12,18 @@
 
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]);
-	char *op = argv[2];
-	int b = atoi(argv[3]);
+	int a, b;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	op = argv[2];
 
 	if (op == NULL)
 	{
