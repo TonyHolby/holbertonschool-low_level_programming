@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
 
 /**
  * sum_them_all - Entry point
@@ -16,16 +15,16 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int i;
 	int res = 0;
 
+	va_start(nb_args, n);
+
 	if (n == 0)
 	{
 		return (0);
 	}
 
-	va_start(nb_args, n);
-	for (i = n; i <= va_arg(nb_args, unsigned int); i++)
+	for (i = 0; i < n; i++)
 	{
-		res += i;
-		printf("res egal %d\n", res);
+		res += va_arg(nb_args, int);
 	}
 	va_end(nb_args);
 
