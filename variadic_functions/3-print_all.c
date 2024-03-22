@@ -8,9 +8,9 @@
  */
 int print_c(va_list args)
 {
-        printf("%c", va_arg(args, int));
+	printf("%c", va_arg(args, int));
 
-        return (0);
+	return (0);
 }
 
 
@@ -21,9 +21,9 @@ int print_c(va_list args)
  */
 int print_i(va_list args)
 {
-        printf("%d", va_arg(args, int));
+	printf("%d", va_arg(args, int));
 
-        return (0);
+	return (0);
 }
 
 
@@ -34,17 +34,17 @@ int print_i(va_list args)
  */
 int print_s(va_list args)
 {
-        char *string = va_arg(args, char *);
+	char *string = va_arg(args, char *);
 
-        if (string == NULL)
-        {
-                printf(("nil"));
-                return (0);
-        }
+	if (string == NULL)
+	{
+		printf("(nil)");
+		return (0);
+	}
 
-        printf("%s", string);
+	printf("%s", string);
 
-        return (0);
+	return (0);
 }
 
 
@@ -55,9 +55,9 @@ int print_s(va_list args)
  */
 int print_f(va_list args)
 {
-        printf("%f", va_arg(args, double));
+	printf("%f", va_arg(args, double));
 
-        return (0);
+	return (0);
 }
 
 
@@ -74,12 +74,12 @@ void print_all(const char * const format, ...)
 	va_list args;
 
 	sp_t type[] = {
-                {'c', print_c},
-                {'i', print_i},
-                {'f', print_f},
-                {'s', print_s},
+		{'c', print_c},
+		{'i', print_i},
+		{'f', print_f},
+		{'s', print_s},
 		{'\0', NULL}
-                };
+		};
 
 	va_start(args, format);
 
