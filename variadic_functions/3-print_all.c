@@ -11,7 +11,6 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	int j;
-	char *sp;
 	char *separator = NULL;
 	va_list args;
 
@@ -24,11 +23,14 @@ void print_all(const char * const format, ...)
                 };
 
 	va_start(args, format);
+
 	i = 0;
+
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
-		while (type[j] != '\0' && type[j].sp == format[i])
+
+		while (type[j].sp != '\0')
 		{
 			if (type[j].sp == format[i])
 			{
@@ -36,8 +38,10 @@ void print_all(const char * const format, ...)
 				type[j].f(args);
 				separator = ", ";
 			}
+
 			j++;
 		}
+
 		i++;
 	}
 
@@ -53,7 +57,7 @@ void print_all(const char * const format, ...)
 
 int print_c(va_list args)
 {
-	printf("%c", va_arg(args, char));
+	printf("%c", va_arg(args, int));
 
 	return (0);
 }
@@ -65,7 +69,7 @@ int print_c(va_list args)
 
 int print_i(va_list args)
 {
-	printf("%d", va_arg(args, int);
+	printf("%d", va_arg(args, int));
 
 	return (0);
 }
@@ -97,7 +101,7 @@ int print_s(va_list args)
 
 int print_f(va_list args)
 {
-	printf("%f", va_arg(args, float);
+	printf("%f", va_arg(args, double));
 
 	return (0);
 }
