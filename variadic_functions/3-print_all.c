@@ -1,10 +1,11 @@
 #include "variadic_functions.h"
 
-/**
- *
- *
- */
 
+/**
+ * print_c - a function that prints a character
+ *@args: arguments in the va_list
+ *Return: 0
+ */
 int print_c(va_list args)
 {
         printf("%c", va_arg(args, int));
@@ -12,11 +13,12 @@ int print_c(va_list args)
         return (0);
 }
 
-/**
- *
- *
- */
 
+/**
+ * print_i - a function that prints an integer
+ *@args: arguments in the va_list
+ *Return: 0
+ */
 int print_i(va_list args)
 {
         printf("%d", va_arg(args, int));
@@ -24,11 +26,12 @@ int print_i(va_list args)
         return (0);
 }
 
-/**
- *
- *
- */
 
+/**
+ * print_s - a function that prints a string
+ *@args: arguments in the va_list
+ *Return: 0
+ */
 int print_s(va_list args)
 {
         char *string = va_arg(args, char *);
@@ -44,11 +47,12 @@ int print_s(va_list args)
         return (0);
 }
 
-/**
- *
- *
- */
 
+/**
+ * print_f - a function that prints a float
+ *@args: arguments in the va_list
+ *Return: 0
+ */
 int print_f(va_list args)
 {
         printf("%f", va_arg(args, double));
@@ -56,18 +60,17 @@ int print_f(va_list args)
         return (0);
 }
 
+
 /**
  * print_all - Entry point
- *
  * Description: a function that prints anything
  * @format: list of types of arguments passed to the function
  */
-
 void print_all(const char * const format, ...)
 {
 	int i;
 	int j;
-	char *separator = NULL;
+	char *separator = "";
 	va_list args;
 
 	sp_t type[] = {
