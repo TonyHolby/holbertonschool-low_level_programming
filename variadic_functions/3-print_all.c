@@ -1,6 +1,62 @@
 #include "variadic_functions.h"
 
 /**
+ *
+ *
+ */
+
+int print_c(va_list args)
+{
+        printf("%c", va_arg(args, int));
+
+        return (0);
+}
+
+/**
+ *
+ *
+ */
+
+int print_i(va_list args)
+{
+        printf("%d", va_arg(args, int));
+
+        return (0);
+}
+
+/**
+ *
+ *
+ */
+
+int print_s(va_list args)
+{
+        char *string = va_arg(args, char *);
+
+        if (string == NULL)
+        {
+                printf(("nil"));
+                return (0);
+        }
+
+        printf("%s", string);
+
+        return (0);
+}
+
+/**
+ *
+ *
+ */
+
+int print_f(va_list args)
+{
+        printf("%f", va_arg(args, double));
+
+        return (0);
+}
+
+/**
  * print_all - Entry point
  *
  * Description: a function that prints anything
@@ -50,58 +106,3 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
-/**
- *
- *
- */
-
-int print_c(va_list args)
-{
-	printf("%c", va_arg(args, int));
-
-	return (0);
-}
-
-/**
- *
- *
- */
-
-int print_i(va_list args)
-{
-	printf("%d", va_arg(args, int));
-
-	return (0);
-}
-
-/**
- *
- *
- */
-
-int print_s(va_list args)
-{
-	char *string = va_arg(args, char *);
-
-	if (string == NULL)
-	{
-		printf("(nil");
-		return (0);
-	}
-
-	printf("%s", string);
-
-	return (0);
-}
-
-/**
- *
- *
- */
-
-int print_f(va_list args)
-{
-	printf("%f", va_arg(args, double));
-
-	return (0);
-}

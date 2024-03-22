@@ -14,7 +14,7 @@
 typedef struct sp
 {
 	char sp;
-	int (*f)(char);
+	int (*f)(va_list);
 } sp_t;
 
 int sum_them_all(const unsigned int n, ...);
