@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * at_the_beginning - a function that adds nodes at the
- * beginning of the list_t list.
+ * add_node - a function that prints all the elements of a list_t list
  * @head: a pointer to a singly linked list node structure
  * @str: a string
+ * Return: the address of the new element, or NULL if it failed
  */
 
 list_t *add_node(list_t **head, const char *str)
