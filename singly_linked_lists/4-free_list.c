@@ -12,10 +12,6 @@ void free_list(list_t *head)
 
 	current = head;
 
-	if (current == NULL)
-	{
-		exit(99);
-	}
 	while (current != NULL)
 	{
 		next_node = current->next;
