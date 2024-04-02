@@ -12,11 +12,18 @@ void free_list(list_t *head)
 
 	current = head;
 
+	if (current == NULL)
+	{
+		return;
+	}
 	while (current != NULL)
 	{
 		next_node = current->next;
 
-		free(current->str);
+		if (current->str != NULL)
+		{
+			free(current->str);
+		}
 
 		free(current);
 
