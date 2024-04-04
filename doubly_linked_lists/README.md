@@ -19,3 +19,6 @@ linked list.
 
 6-sum_dlistint.c : a function that returns the sum of all the data (n) of
 a dlistint_t linked list.
+
+7-insert_dnodeint.c, 2-add_dnodeint.c, 3-add_dnodeint_end.c : a function
+that inserts a new node at a given position.
