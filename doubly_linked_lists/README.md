@@ -13,3 +13,6 @@ dlistint_t list.
 dlistint_t list.
 
 4-free_dlistint.c : a function that frees a dlistint_t list.
+
+5-get_dnodeint.c : a function that returns the nth node of a dlistint_t
+linked list.
