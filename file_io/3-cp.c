@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 	{
-		print_error("Error: Can't read from file ", file_from);
+		print_error("Error: Can't read from file", file_from);
 		return (98);
 	}
 
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 			S_IRGRP | S_IWGRP | S_IROTH);
 	if (fd_to == -1)
 	{
-		print_error("Error: Can't write to ", file_to);
+		print_error("Error: Can't write to", file_to);
 		close(fd_from);
 		return (99);
 	}
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written == -1 || bytes_written != bytes_read)
 		{
-			print_error("Error: Can't write to ", file_to);
+			print_error("Error: Can't write to", file_to);
 			close(fd_from);
 			close(fd_to);
 			return (99);
