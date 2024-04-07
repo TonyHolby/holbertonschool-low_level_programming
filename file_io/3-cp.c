@@ -9,7 +9,7 @@
 
 void print_usage(void)
 {
-	dprintf(STDERR_FILENO, "Usage : cp file_from file_to\n");
+	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 }
 
 /**
