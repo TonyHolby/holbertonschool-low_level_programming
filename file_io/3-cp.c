@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 
 	if (bytes_read == -1)
 	{
-		print_error("Error: Can't read from file ", file_from);
+		print_error("Error: Can't read from file", file_from);
 		close(fd_from);
 		close(fd_to);
 		return (98);
